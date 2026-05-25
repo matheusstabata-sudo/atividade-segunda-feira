@@ -1,0 +1,200 @@
+:root {
+    --dark: #111111;
+    --text: #ffffff;
+    --bg: #1a1a1a;
+    --yellow1: #8f6b00b7;
+    --yellow2: #c89b00;
+    --yellow3: #ffcc00;
+    --yellow4: #ffd633;
+    --font: "Roboto", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font);
+    background-color: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    height: 100px;
+    z-index: 999;
+    transition: all 1s ease-in-out;
+}
+
+nav.sc {
+    background-color: var(--yellow1);
+    box-shadow: 0px 3px 10px var(--yellow1);
+}
+
+.navItems {
+    background-color: #ffffff3a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 999px;
+}
+
+.navItems img {
+    width: 30px;
+}
+
+.navItems:hover {
+    cursor: pointer;
+}
+
+.navItems a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 1vw;
+    letter-spacing: 5px;
+    font-weight: 700;
+}
+
+.navItems a:hover {
+    text-shadow: 0px 3px 10px var(--yellow4);
+}
+
+section {
+    min-height: 100vh;
+}
+
+#s1 {
+    background-image: url('../assets/107195.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 180px;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    text-align: center;
+    text-shadow: 0px 3px 10px #000;
+}
+
+h2 {
+    font-size: 32px;
+    margin-top: 20px;
+    text-align: center;
+    text-shadow: 0px 3px 10px var(--yellow4);
+}
+
+#s2 {
+    background-image: url('../assets/images/lamborghini.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 80px 20px;
+}
+
+.card {
+    width: 300px;
+    background-color: #222;
+    border: 2px solid var(--yellow2);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.5s;
+    opacity: 0;
+    transform: translateY(200px);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 20px var(--yellow3);
+}
+
+.card img {
+    width: 100%;
+}
+
+.card div {
+    padding: 20px;
+}
+
+.card h4 {
+    margin-bottom: 10px;
+    color: var(--yellow3);
+}
+
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.vid {
+    width: 100%;
+    height: 800px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 60px;
+    background-color: transparent;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    transition: all 1s ease-in-out;
+}
+
+footer.ft {
+    background-color: var(--yellow1);
+}
+
+@media (width <= 1000px) {
+    .navWords {
+        display: none;
+    }
+
+    h1 {
+        font-size: 70px;
+    }
+
+    h2 {
+        font-size: 20px;
+        padding: 0 20px;
+    }
+
+    .vid {
+        height: 400px;
+    }
+
+    #s1 {
+        padding: 100px 20px;
+    }
+}
